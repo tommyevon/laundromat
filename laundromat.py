@@ -686,11 +686,11 @@ class AUTO():
         threads_list = []
 
         uk = AUTO.scrape(start_date = 'Jun 12, 2013', rawtxt = 'auto_ukprime_raw_historical.txt', type = 'UKPrime')
-        moto = AUTO.scrape(start_date = 'May 5, 2009', rawtxt = 'auto_motorcylce_raw_historical.txt', type = 'UKPrime')
-        floor = AUTO.scrape(start_date = 'Aug 5, 2009', rawtxt = 'auto_floorplan_raw_historical.txt', type = 'UKPrime')
-        lease = AUTO.scrape(start_date = 'Apr 16, 2008', rawtxt = 'auto_lease_raw_historical.txt', type = 'UKPrime')
-        subprime = AUTO.scrape(start_date = 'Jan 18, 2008', rawtxt = 'auto_subprime_raw_historical.txt', type = 'UKPrime')
-        prime = AUTO.scrape(start_date = 'Mar 12, 2008', rawtxt = 'auto_prime_raw_historical.txt', type = 'UKPrime')
+        moto = AUTO.scrape(start_date = 'May 5, 2009', rawtxt = 'auto_motorcylce_raw_historical.txt', type = 'Motorcycle')
+        floor = AUTO.scrape(start_date = 'Aug 5, 2009', rawtxt = 'auto_floorplan_raw_historical.txt', type = 'Floorplan')
+        lease = AUTO.scrape(start_date = 'Apr 16, 2008', rawtxt = 'auto_lease_raw_historical.txt', type = 'Lease')
+        subprime = AUTO.scrape(start_date = 'Jan 18, 2008', rawtxt = 'auto_subprime_raw_historical.txt', type = 'Subprime')
+        prime = AUTO.scrape(start_date = 'Mar 12, 2008', rawtxt = 'auto_prime_raw_historical.txt', type = 'Prime')
 
         t = Thread(target = lambda q, arg1: q.put(uk.Go(arg1)), args=(que, 'junk'))
         t.start()
